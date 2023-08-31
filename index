@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Event Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #myDiv {
+      padding: 20px;
+      background-color: #f0f0f0;
+      margin-top: 20px;
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button id="myButton">Click Me</button>
+  <div id="myDiv">Hover over me</div>
+  <input type="text" id="myInput" placeholder="Type here">
+  
+  <script>
+    const button = document.getElementById("myButton");
+    const div = document.getElementById("myDiv");
+    const input = document.getElementById("myInput");
+    
+    button.addEventListener("click", function() {
+      alert("Button was clicked!");
+    });
+    
+    div.addEventListener("mouseover", function() {
+      div.style.backgroundColor = "lightblue";
+    });
+    
+    input.addEventListener("keydown", function(event) {
+      console.log("Key pressed:", event.key);
+    });
+  </script>
+</body>
+</html>
